@@ -33,13 +33,22 @@ fill_slot_func = {
     "parameters": {
         "type": "object",
         "properties": {
-            "slot_name":{
-                "type": "string",
-                "description": "name of the slot"
-            },
-            "slot_value":{
-                "type": "string",
-                "description": "value of the slot"
+            "slots_to_fill":{
+                "type": "array",
+                "items":{
+                    "type": "object",
+                        "properties": {
+                        "slot_name":{
+                            "type": "string",
+                            "description": "name of the slot"
+                        },
+                        "slot_value":{
+                            "type": "string",
+                            "description": "value of the slot"
+                        }
+                    }
+                },
+                "description": "list of slots to fill with their values"
             }
         },
         "required": ["slot_name", "slot_value"]
@@ -137,7 +146,8 @@ def check_fill_slot(convo_context, slot_model, remaining_slots):
 
     if tool_choice:
         arguments = json.loads(tool_choice.function.arguments)
-        fill_slot(arguments["slot_name"], slot_model, arguments["slot_value"])
+        for elem in arguments["slots_to_fill"]:
+            fill_slot(elem["slot_name"], slot_model, elem["slot_value"])
         return True
     return False
 
@@ -250,6 +260,7 @@ def run_dialogue(start_state):
         user_response = input()
         conversation += f"User: {user_response}\n"
         created_slot = check_create_slot(conversation, slot_model, slot_model.keys())
+        remaining_slots = [key for key, value in slot_model.items() if value == "unfilled"]
         filled_slot = check_fill_slot(conversation, slot_model, remaining_slots)
         # response = generate_response("confirm", slot_name, user_response)
         # print(response)
