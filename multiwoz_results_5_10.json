@@ -1,0 +1,1161 @@
+[
+  {
+    "SNG01520.json": {
+      "results": [
+        {
+          "utterance": "I am looking for a restaurant. I would like something cheap that has Chinese food.",
+          "known_info": {},
+          "generated": { "cuisine_type": "Chinese", "price_range": "cheap" },
+          "expected": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap"
+          },
+          "excess": { "cuisine_type": "Chinese", "price_range": "cheap" },
+          "missing": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap"
+          }
+        },
+        {
+          "utterance": "Yes, could you make a reservation for 1 at 20:00 on Saturday?",
+          "known_info": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap",
+            "restaurant-name": "the lucky star"
+          },
+          "generated": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap",
+            "restaurant-name": "the lucky star",
+            "reservation-time": "20:00",
+            "reservation-date": "Saturday",
+            "reservation-party-size": "1"
+          },
+          "expected": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap",
+            "restaurant-name": "the lucky star",
+            "restaurant-bookday": "saturday",
+            "restaurant-bookpeople": "1",
+            "restaurant-booktime": "20:00"
+          },
+          "excess": {
+            "reservation-time": "20:00",
+            "reservation-date": "Saturday",
+            "reservation-party-size": "1"
+          },
+          "missing": {
+            "restaurant-bookday": "saturday",
+            "restaurant-bookpeople": "1",
+            "restaurant-booktime": "20:00"
+          }
+        },
+        {
+          "utterance": "Thank you so much for your help!",
+          "known_info": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap",
+            "restaurant-name": "the lucky star",
+            "restaurant-bookday": "saturday",
+            "restaurant-bookpeople": "1",
+            "restaurant-booktime": "20:00"
+          },
+          "generated": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap",
+            "restaurant-name": "the lucky star",
+            "restaurant-bookday": "saturday",
+            "restaurant-bookpeople": "1",
+            "restaurant-booktime": "20:00"
+          },
+          "expected": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap",
+            "restaurant-name": "the lucky star",
+            "restaurant-bookday": "saturday",
+            "restaurant-bookpeople": "1",
+            "restaurant-booktime": "20:00"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Thanks, you too. Goodbye.",
+          "known_info": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap",
+            "restaurant-name": "the lucky star",
+            "restaurant-bookday": "saturday",
+            "restaurant-bookpeople": "1",
+            "restaurant-booktime": "20:00"
+          },
+          "generated": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap",
+            "restaurant-name": "the lucky star",
+            "restaurant-bookday": "saturday",
+            "restaurant-bookpeople": "1",
+            "restaurant-booktime": "20:00"
+          },
+          "expected": {
+            "restaurant-food": "chinese",
+            "restaurant-pricerange": "cheap",
+            "restaurant-name": "the lucky star",
+            "restaurant-bookday": "saturday",
+            "restaurant-bookpeople": "1",
+            "restaurant-booktime": "20:00"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "PMUL3951.json": {
+      "results": [
+        {
+          "utterance": "Please find me a train from cambridge to stansted airport",
+          "known_info": {},
+          "generated": {
+            "departure_location": "cambridge",
+            "destination": "stansted airport",
+            "travel_date": "unfilled",
+            "travel_time": "unfilled"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport"
+          },
+          "excess": {
+            "departure_location": "cambridge",
+            "destination": "stansted airport",
+            "travel_date": "unfilled",
+            "travel_time": "unfilled"
+          },
+          "missing": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport"
+          }
+        },
+        {
+          "utterance": "Saturday leaving Cambridge anytime after 20:00 please",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "departure-date": "Saturday",
+            "departure-time": "after 20:00"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00"
+          },
+          "excess": {
+            "departure-date": "Saturday",
+            "departure-time": "after 20:00"
+          },
+          "missing": { "train-day": "saturday", "train-leaveat": "20:00" }
+        },
+        {
+          "utterance": "Can you book me 6 tickets please?",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "number-of-tickets": "6"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6"
+          },
+          "excess": { "number-of-tickets": "6" },
+          "missing": { "train-bookpeople": "6" }
+        },
+        {
+          "utterance": "I am also looking for The Riverside Brasserie.",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "The Riverside Brasserie"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Yes, I would like to book it and get a reference number.",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "booking-reference-number": "unfilled"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre"
+          },
+          "excess": { "booking-reference-number": "unfilled" },
+          "missing": {
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre"
+          }
+        },
+        {
+          "utterance": "Can you try for Saturday at 13:00?",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre",
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00"
+          },
+          "excess": {},
+          "missing": {
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00"
+          }
+        },
+        {
+          "utterance": "6 people will be dining",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre",
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre",
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00",
+            "restaurant-bookpeople": "6"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre",
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00",
+            "restaurant-bookpeople": "6"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Thanks for everything you have been great!",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre",
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00",
+            "restaurant-bookpeople": "6"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre",
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00",
+            "restaurant-bookpeople": "6"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre",
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00",
+            "restaurant-bookpeople": "6"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "No that is all I needed. Thank you ever so kindly.",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre",
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00",
+            "restaurant-bookpeople": "6"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre",
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00",
+            "restaurant-bookpeople": "6"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-day": "saturday",
+            "train-leaveat": "20:00",
+            "train-bookpeople": "6",
+            "restaurant-name": "riverside brasserie",
+            "restaurant-food": "modern european",
+            "restaurant-ref": "unfilled",
+            "restaurant-area": "centre",
+            "restaurant-bookday": "saturday",
+            "restaurant-booktime": "13:00",
+            "restaurant-bookpeople": "6"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "PMUL0843.json": {
+      "results": [
+        {
+          "utterance": "I'm looking for an expensive restaurant in the centre if you could help me.",
+          "known_info": {},
+          "generated": {
+            "restaurant_location": "centre",
+            "restaurant_price_range": "expensive"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive"
+          },
+          "excess": {
+            "restaurant_location": "centre",
+            "restaurant_price_range": "expensive"
+          },
+          "missing": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive"
+          }
+        },
+        {
+          "utterance": "No, not really. I think I'd like to try something different. Could you suggest something?",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Yes, I would like both the phone number and the postcode please.",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "Little Seoul"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "Little Seoul",
+            "restaurant-phone-number": "phone number",
+            "restaurant-postcode": "unfilled"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled"
+          },
+          "excess": { "restaurant-phone-number": "phone number" },
+          "missing": {
+            "restaurant-phone": "unfilled",
+            "restaurant-address": "unfilled"
+          }
+        },
+        {
+          "utterance": "Can I also have the address please?",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "I also want to see the travel times for a train going from Kings Lynn from Cambridge on Saturday. It should leave after 09:15.",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "departure-location": "Kings Lynn",
+            "arrival-location": "Cambridge",
+            "departure-day": "Saturday",
+            "departure-time": "after 09:15"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15"
+          },
+          "excess": {
+            "departure-location": "Kings Lynn",
+            "arrival-location": "Cambridge",
+            "departure-day": "Saturday",
+            "departure-time": "after 09:15"
+          },
+          "missing": {
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15"
+          }
+        },
+        {
+          "utterance": "I got that backwards. Need a train leaving Kings Lynn after 9:15 and arriving in Cambridge sometime on Saturday.",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15",
+            "train-arrival": "unfilled"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15"
+          },
+          "excess": { "train-arrival": "unfilled" },
+          "missing": {}
+        },
+        {
+          "utterance": "Sure. Could you tell me the exact travel time?",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "that is it for today. good day thank you",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-name": "little seoul",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled",
+            "restaurant-address": "unfilled",
+            "train-duration": "unfilled",
+            "train-day": "saturday",
+            "train-departure": "kings lynn",
+            "train-destination": "cambridge",
+            "train-leaveat": "09:15"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "PMUL2979.json": {
+      "results": [
+        {
+          "utterance": "I'm looking for a places to go and see during my upcoming trip to Cambridge.",
+          "known_info": {},
+          "generated": {
+            "trip_date": "unfilled",
+            "interests": "unfilled",
+            "duration_of_stay": "unfilled"
+          },
+          "expected": {},
+          "excess": {
+            "trip_date": "unfilled",
+            "interests": "unfilled",
+            "duration_of_stay": "unfilled"
+          },
+          "missing": {}
+        },
+        {
+          "utterance": "I would like to go to the south area please.",
+          "known_info": {},
+          "generated": { "destination_area": "south area" },
+          "expected": { "attraction-area": "south" },
+          "excess": { "destination_area": "south area" },
+          "missing": { "attraction-area": "south" }
+        },
+        {
+          "utterance": "That's a lot of choices, how about nightclubs? Can you get me a couple of phone numbers for good ones? I'm hoping to catch DJ Squalour from Ibiza!",
+          "known_info": { "attraction-area": "south" },
+          "generated": {
+            "attraction-area": "south",
+            "nightclub-phone-numbers": "unfilled",
+            "DJ-name": "DJ Squalour"
+          },
+          "expected": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub"
+          },
+          "excess": {
+            "nightclub-phone-numbers": "unfilled",
+            "DJ-name": "DJ Squalour"
+          },
+          "missing": {
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub"
+          }
+        },
+        {
+          "utterance": "Yes, I would like an expensive hotel with free parking.",
+          "known_info": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub"
+          },
+          "generated": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-price-range": "expensive",
+            "hotel-parking": "free"
+          },
+          "expected": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive"
+          },
+          "excess": { "hotel-price-range": "expensive" },
+          "missing": { "hotel-pricerange": "expensive" }
+        },
+        {
+          "utterance": "Is it four star?",
+          "known_info": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "places"
+          },
+          "generated": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "places",
+            "star-rating": "four star"
+          },
+          "expected": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "places"
+          },
+          "excess": { "star-rating": "four star" },
+          "missing": {}
+        },
+        {
+          "utterance": "Okay well now I need to get a taxi to leave the hotel by 17:45 to the attraction. I will need a contact number and car type.",
+          "known_info": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "places",
+            "taxi-departure": "Huntington Marriott"
+          },
+          "generated": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "places",
+            "taxi-departure": "Huntington Marriott",
+            "taxi-leave-time": "17:45",
+            "taxi-contact-number": "unfilled",
+            "taxi-car-type": "unfilled"
+          },
+          "expected": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "places",
+            "taxi-departure": "huntington marriott",
+            "taxi-type": "unfilled",
+            "taxi-phone": "unfilled",
+            "taxi-leaveat": "17:45"
+          },
+          "excess": {
+            "taxi-leave-time": "17:45",
+            "taxi-contact-number": "unfilled",
+            "taxi-car-type": "unfilled"
+          },
+          "missing": {
+            "taxi-type": "unfilled",
+            "taxi-phone": "unfilled",
+            "taxi-leaveat": "17:45"
+          }
+        },
+        {
+          "utterance": "I want to confirm that the booked red Lexus is a taxi, as I previously requested?",
+          "known_info": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "places",
+            "taxi-departure": "huntington marriott",
+            "taxi-type": "unfilled",
+            "taxi-phone": "unfilled",
+            "taxi-leaveat": "17:45"
+          },
+          "generated": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "places",
+            "taxi-departure": "huntington marriott",
+            "taxi-type": "unfilled",
+            "taxi-phone": "unfilled",
+            "taxi-leaveat": "17:45"
+          },
+          "expected": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "the place",
+            "taxi-departure": "huntingdon marriott hotel",
+            "taxi-type": "unfilled",
+            "taxi-phone": "unfilled",
+            "taxi-leaveat": "17:45"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "No that is it. Thank you!",
+          "known_info": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "the place",
+            "taxi-departure": "huntingdon marriott hotel",
+            "taxi-type": "unfilled",
+            "taxi-phone": "unfilled",
+            "taxi-leaveat": "17:45"
+          },
+          "generated": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "the place",
+            "taxi-departure": "huntingdon marriott hotel",
+            "taxi-type": "unfilled",
+            "taxi-phone": "unfilled",
+            "taxi-leaveat": "17:45"
+          },
+          "expected": {
+            "attraction-area": "south",
+            "attraction-phone": "unfilled",
+            "attraction-type": "nightclub",
+            "hotel-parking": "yes",
+            "hotel-pricerange": "expensive",
+            "taxi-destination": "the place",
+            "taxi-departure": "huntingdon marriott hotel",
+            "taxi-type": "unfilled",
+            "taxi-phone": "unfilled",
+            "taxi-leaveat": "17:45"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "MUL1681.json": {
+      "results": [
+        {
+          "utterance": "Hi, I'd like to book a train to stansted airport from cambridge. Can you help?",
+          "known_info": {},
+          "generated": {
+            "departure_location": "cambridge",
+            "destination": "stansted airport",
+            "travel_date": "unfilled",
+            "travel_time": "unfilled"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport"
+          },
+          "excess": {
+            "departure_location": "cambridge",
+            "destination": "stansted airport",
+            "travel_date": "unfilled",
+            "travel_time": "unfilled"
+          },
+          "missing": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport"
+          }
+        },
+        {
+          "utterance": "From Cambridge, which is why I asked the Cambridge TownInfo centre.",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "user_location": "Cambridge"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport"
+          },
+          "excess": { "user_location": "Cambridge" },
+          "missing": {}
+        },
+        {
+          "utterance": "On Saturday. Is there a train that will arrive by 15:15?",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arrival-time": "15:15",
+            "train-date": "Saturday"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday"
+          },
+          "excess": { "train-arrival-time": "15:15", "train-date": "Saturday" },
+          "missing": { "train-arriveby": "15:15", "train-day": "saturday" }
+        },
+        {
+          "utterance": "No need to book it. Thanks. But can you help me find a cheap restaurant in the south?",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-location": "south",
+            "restaurant-type": "unfilled",
+            "restaurant-price-range": "cheap"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap"
+          },
+          "excess": {
+            "restaurant-location": "south",
+            "restaurant-type": "unfilled",
+            "restaurant-price-range": "cheap"
+          },
+          "missing": {
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap"
+          }
+        },
+        {
+          "utterance": "The Lucky Star sounds good. That's all I need.",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Can you also tell me the postcode?",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap",
+            "postcode": "unfilled"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap",
+            "restaurant-postcode": "unfilled",
+            "restaurant-name": "the lucky star"
+          },
+          "excess": { "postcode": "unfilled" },
+          "missing": {
+            "restaurant-postcode": "unfilled",
+            "restaurant-name": "the lucky star"
+          }
+        },
+        {
+          "utterance": "Thanks for your help. Good bye.",
+          "known_info": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap",
+            "restaurant-postcode": "unfilled",
+            "restaurant-name": "the lucky star"
+          },
+          "generated": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap",
+            "restaurant-postcode": "unfilled",
+            "restaurant-name": "the lucky star"
+          },
+          "expected": {
+            "train-departure": "cambridge",
+            "train-destination": "stansted airport",
+            "train-arriveby": "15:15",
+            "train-day": "saturday",
+            "restaurant-area": "south",
+            "restaurant-pricerange": "cheap",
+            "restaurant-postcode": "unfilled",
+            "restaurant-name": "the lucky star"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,34 @@
+Current Slots: {'location': 'center', 'price_range': 'expensive'} 
+Expected Slots: {} 
+
+Current Slots: {'restaurant-area': 'centre', 'restaurant-pricerange': 'expensive', 'restaurant-phone-number': 'your recommendation'} 
+Expected Slots: {} 
+
+Current Slots: {'restaurant-food': 'unfilled', 'restaurant-area': 'centre', 'restaurant-pricerange': 'expensive', 'restaurant-name': 'Bedouin', 'restaurant-phone': 'unfilled', 'hotel-pricerange': 'expensive'} 
+Expected Slots: {} 
+
+Current Slots: {'restaurant-name': 'bedouin', 'restaurant-phone': 'unfilled', 'restaurant-area': 'centre', 'restaurant-pricerange': 'expensive', 'hotel-pricerange': 'expensive', 'hotel-type': 'hotel', 'hotel-name': 'University Arms Hotel', 'hotel-booking-date': 'unfilled', 'hotel-booking-duration': 'unfilled', 'hotel-booking-room-type': 'unfilled'} 
+Expected Slots: {} 
+
+Current Slots: {'hotel-name': 'university arms hotel', 'restaurant-area': 'centre', 'restaurant-name': 'bedouin', 'restaurant-pricerange': 'expensive', 'hotel-pricerange': 'expensive', 'hotel-type': 'hotel', 'number-of-people': '2', 'number-of-nights': 'unfilled', 'start-date': 'unfilled'} 
+Expected Slots: {} 
+
+Current Slots: {'restaurant-area': 'centre', 'restaurant-name': 'bedouin', 'restaurant-pricerange': 'expensive', 'hotel-bookday': 'saturday', 'hotel-bookpeople': '2', 'hotel-bookstay': '2', 'hotel-name': 'university arms hotel', 'hotel-pricerange': 'expensive', 'hotel-type': 'hotel'} 
+Expected Slots: {} 
+
+Conversation: 
+User: i need a place to dine in the center thats expensive
+System: I have several options for you; do you prefer African, Asian, or British food?
+User: Any sort of food would be fine, as long as it is a bit expensive. Could I get the phone number for your recommendation?
+System: There is an Afrian place named Bedouin in the centre. How does that sound?
+User: Sounds good, could I get that phone number? Also, could you recommend me an expensive hotel?
+System: Bedouin's phone is 01223367660. As far as hotels go, I recommend the University Arms Hotel in the center of town.
+User: Yes. Can you book it for me?
+System: Sure, when would you like that reservation?
+User: i want to book it for 2 people and 2 nights starting from saturday.
+System: Your booking was successful. Your reference number is FRGZWQL2 . May I help you further?
+User: That is all I need to know. Thanks, good bye.
+System: Thank you so much for Cambridge TownInfo centre. Have a great day!
+
+
+

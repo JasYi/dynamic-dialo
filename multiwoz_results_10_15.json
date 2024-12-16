@@ -1,0 +1,863 @@
+[
+  {
+    "MUL0928.json": {
+      "results": [
+        {
+          "utterance": "Yeah, could you recommend a good gastropub?",
+          "known_info": {},
+          "generated": {
+            "gastropub_recommendation": "User asked for a gastropub recommendation."
+          },
+          "expected": { "restaurant-food": "gastropub" },
+          "excess": {
+            "gastropub_recommendation": "User asked for a gastropub recommendation."
+          },
+          "missing": { "restaurant-food": "gastropub" }
+        },
+        {
+          "utterance": "I would like to book a table at the Backstreet Bistro for 5 people at 16:00 on Thursday.",
+          "known_info": { "restaurant-food": "gastropub" },
+          "generated": {
+            "restaurant-food": "gastropub",
+            "restaurant-name": "Backstreet Bistro",
+            "number-of-people": "5",
+            "time": "16:00",
+            "date": "Thursday"
+          },
+          "expected": {
+            "restaurant-food": "gastropub",
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00",
+            "restaurant-name": "backstreet bistro"
+          },
+          "excess": {
+            "number-of-people": "5",
+            "time": "16:00",
+            "date": "Thursday"
+          },
+          "missing": {
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00"
+          }
+        },
+        {
+          "utterance": "Yes, any suggestions of museums found in the east area of town?",
+          "known_info": {
+            "restaurant-food": "gastropub",
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00",
+            "restaurant-name": "backstreet bistro"
+          },
+          "generated": {
+            "restaurant-food": "gastropub",
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00",
+            "restaurant-name": "backstreet bistro",
+            "museum-location": "east area of town",
+            "museum-type": "unfilled"
+          },
+          "expected": {
+            "restaurant-food": "gastropub",
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00",
+            "restaurant-name": "backstreet bistro",
+            "attraction-area": "east",
+            "attraction-type": "museum"
+          },
+          "excess": {
+            "museum-location": "east area of town",
+            "museum-type": "unfilled"
+          },
+          "missing": { "attraction-area": "east", "attraction-type": "museum" }
+        },
+        {
+          "utterance": "Can I please have the phone number and address for that place?",
+          "known_info": {
+            "restaurant-food": "gastropub",
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00",
+            "restaurant-name": "backstreet bistro",
+            "attraction-area": "east",
+            "attraction-type": "museum",
+            "attraction-name": "Gallery"
+          },
+          "generated": {
+            "restaurant-food": "gastropub",
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00",
+            "restaurant-name": "backstreet bistro",
+            "attraction-area": "east",
+            "attraction-type": "museum",
+            "attraction-name": "Gallery",
+            "restaurant-phone": "unfilled",
+            "restaurant-address": "unfilled"
+          },
+          "expected": {
+            "restaurant-food": "gastropub",
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00",
+            "restaurant-name": "backstreet bistro",
+            "attraction-area": "east",
+            "attraction-type": "museum",
+            "attraction-name": "gallery",
+            "attraction-address": "unfilled",
+            "attraction-phone": "unfilled"
+          },
+          "excess": {
+            "restaurant-phone": "unfilled",
+            "restaurant-address": "unfilled"
+          },
+          "missing": {
+            "attraction-address": "unfilled",
+            "attraction-phone": "unfilled"
+          }
+        },
+        {
+          "utterance": "Great that's all the information I needed today, thank you!",
+          "known_info": {
+            "restaurant-food": "gastropub",
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00",
+            "restaurant-name": "backstreet bistro",
+            "attraction-area": "east",
+            "attraction-type": "museum",
+            "attraction-name": "gallery",
+            "attraction-address": "unfilled",
+            "attraction-phone": "unfilled"
+          },
+          "generated": {
+            "restaurant-food": "gastropub",
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00",
+            "restaurant-name": "backstreet bistro",
+            "attraction-area": "east",
+            "attraction-type": "museum",
+            "attraction-name": "gallery",
+            "attraction-address": "unfilled",
+            "attraction-phone": "unfilled"
+          },
+          "expected": {
+            "restaurant-food": "gastropub",
+            "restaurant-bookday": "thursday",
+            "restaurant-bookpeople": "5",
+            "restaurant-booktime": "16:00",
+            "restaurant-name": "backstreet bistro",
+            "attraction-area": "east",
+            "attraction-type": "museum",
+            "attraction-name": "gallery",
+            "attraction-address": "unfilled",
+            "attraction-phone": "unfilled"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "WOZ20645.json": {
+      "results": [
+        {
+          "utterance": "I want to find an expensive restaurant and serves european food. Can i also have the address, phone number and its area. ?",
+          "known_info": {},
+          "generated": {
+            "restaurant_type": "expensive",
+            "cuisine_type": "european",
+            "address": "unfilled",
+            "phone_number": "unfilled",
+            "area": "unfilled"
+          },
+          "expected": {
+            "restaurant-area": "unfilled",
+            "restaurant-phone": "unfilled",
+            "restaurant-address": "unfilled",
+            "restaurant-food": "european",
+            "restaurant-pricerange": "expensive"
+          },
+          "excess": {
+            "restaurant_type": "expensive",
+            "cuisine_type": "european",
+            "address": "unfilled",
+            "phone_number": "unfilled",
+            "area": "unfilled"
+          },
+          "missing": {
+            "restaurant-area": "unfilled",
+            "restaurant-phone": "unfilled",
+            "restaurant-address": "unfilled",
+            "restaurant-food": "european",
+            "restaurant-pricerange": "expensive"
+          }
+        },
+        {
+          "utterance": "thank you goodbye",
+          "known_info": {
+            "restaurant-area": "unfilled",
+            "restaurant-phone": "unfilled",
+            "restaurant-address": "unfilled",
+            "restaurant-food": "european",
+            "restaurant-pricerange": "expensive"
+          },
+          "generated": {
+            "restaurant-area": "unfilled",
+            "restaurant-phone": "unfilled",
+            "restaurant-address": "unfilled",
+            "restaurant-food": "european",
+            "restaurant-pricerange": "expensive"
+          },
+          "expected": {
+            "restaurant-area": "unfilled",
+            "restaurant-phone": "unfilled",
+            "restaurant-address": "unfilled",
+            "restaurant-food": "european",
+            "restaurant-pricerange": "expensive"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "SNG02152.json": {
+      "results": [
+        {
+          "utterance": "I need a 19:15 taxi to take me to Avalon.",
+          "known_info": {},
+          "generated": { "pickup_time": "19:15", "destination": "Avalon" },
+          "expected": { "taxi-destination": "avalon", "taxi-leaveat": "19:15" },
+          "excess": { "pickup_time": "19:15", "destination": "Avalon" },
+          "missing": { "taxi-destination": "avalon", "taxi-leaveat": "19:15" }
+        },
+        {
+          "utterance": "I will be departing from Primavera.",
+          "known_info": {
+            "taxi-destination": "avalon",
+            "taxi-leaveat": "19:15"
+          },
+          "generated": {
+            "taxi-destination": "avalon",
+            "taxi-leaveat": "19:15",
+            "taxi-departure": "Primavera"
+          },
+          "expected": {
+            "taxi-destination": "avalon",
+            "taxi-leaveat": "19:15",
+            "taxi-departure": "primavera"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Can i get the contact number please",
+          "known_info": {
+            "taxi-destination": "avalon",
+            "taxi-leaveat": "19:15",
+            "taxi-departure": "primavera"
+          },
+          "generated": {
+            "taxi-destination": "avalon",
+            "taxi-leaveat": "19:15",
+            "taxi-departure": "primavera",
+            "contact-number": "unfilled"
+          },
+          "expected": {
+            "taxi-destination": "avalon",
+            "taxi-leaveat": "19:15",
+            "taxi-departure": "primavera",
+            "taxi-phone": "unfilled"
+          },
+          "excess": { "contact-number": "unfilled" },
+          "missing": { "taxi-phone": "unfilled" }
+        },
+        {
+          "utterance": "No, that will be all. Good bye.",
+          "known_info": {
+            "taxi-destination": "avalon",
+            "taxi-leaveat": "19:15",
+            "taxi-departure": "primavera",
+            "taxi-phone": "unfilled"
+          },
+          "generated": {
+            "taxi-destination": "avalon",
+            "taxi-leaveat": "19:15",
+            "taxi-departure": "primavera",
+            "taxi-phone": "unfilled"
+          },
+          "expected": {
+            "taxi-destination": "avalon",
+            "taxi-leaveat": "19:15",
+            "taxi-departure": "primavera",
+            "taxi-phone": "unfilled"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "PMUL2460.json": {
+      "results": [
+        {
+          "utterance": "Where's a good place to eat crossover food in Cambridge?",
+          "known_info": {},
+          "generated": {
+            "crossover food": "crossover food",
+            "location": "Cambridge"
+          },
+          "expected": { "restaurant-food": "crossover" },
+          "excess": {
+            "crossover food": "crossover food",
+            "location": "Cambridge"
+          },
+          "missing": { "restaurant-food": "crossover" }
+        },
+        {
+          "utterance": "How about British restaurants in the Centre instead?",
+          "known_info": { "restaurant-food": "crossover" },
+          "generated": {
+            "restaurant-food": "crossover",
+            "restaurant-location": "Centre"
+          },
+          "expected": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre"
+          },
+          "excess": { "restaurant-location": "Centre" },
+          "missing": { "restaurant-area": "centre" }
+        },
+        {
+          "utterance": "I would prefer the british food.",
+          "known_info": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre"
+          },
+          "generated": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre"
+          },
+          "expected": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "dontcare"
+          },
+          "excess": {},
+          "missing": { "restaurant-pricerange": "dontcare" }
+        },
+        {
+          "utterance": "Yes please make a booking for 8 people at 12:30 on friday.",
+          "known_info": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "dontcare",
+            "restaurant-name": "cotto"
+          },
+          "generated": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "dontcare",
+            "restaurant-name": "cotto",
+            "number-of-people": "8",
+            "booking-time": "12:30",
+            "booking-day": "friday"
+          },
+          "expected": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "moderate",
+            "restaurant-name": "cotto",
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30"
+          },
+          "excess": {
+            "number-of-people": "8",
+            "booking-time": "12:30",
+            "booking-day": "friday"
+          },
+          "missing": {
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30"
+          }
+        },
+        {
+          "utterance": "What's a good college to visit near the restaurant?",
+          "known_info": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "moderate",
+            "restaurant-name": "cotto",
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30"
+          },
+          "generated": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "moderate",
+            "restaurant-name": "cotto",
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30",
+            "college-name": "unfilled",
+            "college-location": "unfilled"
+          },
+          "expected": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "moderate",
+            "restaurant-name": "cotto",
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30",
+            "attraction-area": "centre",
+            "attraction-type": "college"
+          },
+          "excess": {
+            "college-name": "unfilled",
+            "college-location": "unfilled"
+          },
+          "missing": {
+            "attraction-area": "centre",
+            "attraction-type": "college"
+          }
+        },
+        {
+          "utterance": "Any college will be fine what do you recommend? I need the phone number for whichever you pick.",
+          "known_info": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "moderate",
+            "restaurant-name": "cotto",
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30",
+            "attraction-area": "centre",
+            "attraction-type": "college"
+          },
+          "generated": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "moderate",
+            "restaurant-name": "cotto",
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30",
+            "attraction-area": "centre",
+            "attraction-type": "college",
+            "college-name": "unfilled",
+            "college-phone-number": "unfilled"
+          },
+          "expected": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "moderate",
+            "restaurant-name": "cotto",
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30",
+            "attraction-area": "centre",
+            "attraction-type": "college",
+            "attraction-phone": "unfilled",
+            "attraction-name": "dontcare"
+          },
+          "excess": {
+            "college-name": "unfilled",
+            "college-phone-number": "unfilled"
+          },
+          "missing": {
+            "attraction-phone": "unfilled",
+            "attraction-name": "dontcare"
+          }
+        },
+        {
+          "utterance": "That is all I needed.",
+          "known_info": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "moderate",
+            "restaurant-name": "cotto",
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30",
+            "attraction-area": "centre",
+            "attraction-type": "college",
+            "attraction-phone": "unfilled",
+            "attraction-name": "dontcare"
+          },
+          "generated": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "moderate",
+            "restaurant-name": "cotto",
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30",
+            "attraction-area": "centre",
+            "attraction-type": "college",
+            "attraction-phone": "unfilled",
+            "attraction-name": "dontcare"
+          },
+          "expected": {
+            "restaurant-food": "british",
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "moderate",
+            "restaurant-name": "cotto",
+            "restaurant-bookday": "friday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "12:30",
+            "attraction-area": "centre",
+            "attraction-type": "college",
+            "attraction-phone": "unfilled",
+            "attraction-name": "dontcare"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "MUL0358.json": {
+      "results": [
+        {
+          "utterance": "I want a restaurant in the north of Cambridge that is within a moderate price range.",
+          "known_info": {},
+          "generated": {
+            "location": "north of Cambridge",
+            "price_range": "moderate"
+          },
+          "expected": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled"
+          },
+          "excess": {
+            "location": "north of Cambridge",
+            "price_range": "moderate"
+          },
+          "missing": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled"
+          }
+        },
+        {
+          "utterance": "Please book a table for 4 at the Chinese place at 12:30 on Sunday and give me the reference number.",
+          "known_info": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled"
+          },
+          "generated": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-name": "Chinese place",
+            "number-of-people": "4",
+            "booking-time": "12:30",
+            "booking-day": "Sunday"
+          },
+          "expected": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese"
+          },
+          "excess": {
+            "restaurant-name": "Chinese place",
+            "number-of-people": "4",
+            "booking-time": "12:30",
+            "booking-day": "Sunday"
+          },
+          "missing": {
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese"
+          }
+        },
+        {
+          "utterance": "I am also looking for a train that goes to broxbourne on monday.",
+          "known_info": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese"
+          },
+          "generated": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-destination": "broxbourne",
+            "train-day": "unfilled"
+          },
+          "expected": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "I would like to arrive in broxbourne by 13:00.",
+          "known_info": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne"
+          },
+          "generated": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arrival-time": "13:00"
+          },
+          "expected": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00"
+          },
+          "excess": { "train-arrival-time": "13:00" },
+          "missing": { "train-arriveby": "13:00" }
+        },
+        {
+          "utterance": "Can I just get the price on one of them?",
+          "known_info": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00"
+          },
+          "generated": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00"
+          },
+          "expected": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Please book one.",
+          "known_info": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00"
+          },
+          "generated": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00",
+            "restaurant-name": "unfilled"
+          },
+          "expected": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00"
+          },
+          "excess": { "restaurant-name": "unfilled" },
+          "missing": {}
+        },
+        {
+          "utterance": "Just one, thank you! Please provide me with a reference number.",
+          "known_info": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00"
+          },
+          "generated": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00"
+          },
+          "expected": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00",
+            "train-bookpeople": "1"
+          },
+          "excess": {},
+          "missing": { "train-bookpeople": "1" }
+        },
+        {
+          "utterance": "No, thank you. That will be all for today. Thanks.",
+          "known_info": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00",
+            "train-bookpeople": "1"
+          },
+          "generated": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00",
+            "train-bookpeople": "1"
+          },
+          "expected": {
+            "restaurant-area": "north",
+            "restaurant-pricerange": "moderate",
+            "train-price": "unfilled",
+            "restaurant-ref": "unfilled",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "4",
+            "restaurant-booktime": "12:30",
+            "restaurant-food": "chinese",
+            "train-day": "monday",
+            "train-destination": "broxbourne",
+            "train-arriveby": "13:00",
+            "train-bookpeople": "1"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  }
+]

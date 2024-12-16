@@ -1,0 +1,199 @@
+[
+  {
+    "utterance": "i need a place to dine in the center thats expensive",
+    "known_info": {},
+    "generated": { "location": "center", "price_range": "expensive" },
+    "expected": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive"
+    },
+    "excess": { "location": "center", "price_range": "expensive" },
+    "missing": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive"
+    }
+  },
+  {
+    "utterance": "Any sort of food would be fine, as long as it is a bit expensive. Could I get the phone number for your recommendation?",
+    "known_info": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive"
+    },
+    "generated": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-phone": "phone number for restaurant recommendation"
+    },
+    "expected": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled"
+    },
+    "excess": {
+      "restaurant-phone": "phone number for restaurant recommendation"
+    },
+    "missing": { "restaurant-food": "unfilled" }
+  },
+  {
+    "utterance": "Sounds good, could I get that phone number? Also, could you recommend me an expensive hotel?",
+    "known_info": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "Bedouin"
+    },
+    "generated": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "Bedouin",
+      "hotel-pricerange": "expensive"
+    },
+    "expected": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "bedouin",
+      "restaurant-phone": "unfilled",
+      "hotel-pricerange": "expensive",
+      "hotel-type": "hotel"
+    },
+    "excess": {},
+    "missing": { "restaurant-phone": "unfilled", "hotel-type": "hotel" }
+  },
+  {
+    "utterance": "Yes. Can you book it for me?",
+    "known_info": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "bedouin",
+      "restaurant-phone": "unfilled",
+      "hotel-pricerange": "expensive",
+      "hotel-type": "hotel",
+      "hotel-name": "University Arms Hotel"
+    },
+    "generated": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "bedouin",
+      "restaurant-phone": "unfilled",
+      "hotel-pricerange": "expensive",
+      "hotel-type": "hotel",
+      "hotel-name": "University Arms Hotel",
+      "booking-date": "unfilled",
+      "booking-time": "unfilled",
+      "number-of-people": "unfilled"
+    },
+    "expected": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "bedouin",
+      "restaurant-phone": "unfilled",
+      "hotel-pricerange": "expensive",
+      "hotel-type": "hotel",
+      "hotel-name": "university arms hotel"
+    },
+    "excess": {
+      "booking-date": "unfilled",
+      "booking-time": "unfilled",
+      "number-of-people": "unfilled"
+    },
+    "missing": {}
+  },
+  {
+    "utterance": "i want to book it for 2 people and 2 nights starting from saturday.",
+    "known_info": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "bedouin",
+      "restaurant-phone": "unfilled",
+      "hotel-pricerange": "expensive",
+      "hotel-type": "hotel",
+      "hotel-name": "university arms hotel"
+    },
+    "generated": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "bedouin",
+      "restaurant-phone": "unfilled",
+      "hotel-pricerange": "expensive",
+      "hotel-type": "hotel",
+      "hotel-name": "university arms hotel",
+      "hotel-booking-people": "2 people",
+      "hotel-booking-nights": "2 nights",
+      "hotel-booking-start-date": "Saturday"
+    },
+    "expected": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "bedouin",
+      "restaurant-phone": "unfilled",
+      "hotel-pricerange": "expensive",
+      "hotel-type": "hotel",
+      "hotel-name": "university arms hotel",
+      "hotel-bookday": "saturday",
+      "hotel-bookpeople": "2",
+      "hotel-bookstay": "2"
+    },
+    "excess": {
+      "hotel-booking-people": "2 people",
+      "hotel-booking-nights": "2 nights",
+      "hotel-booking-start-date": "Saturday"
+    },
+    "missing": {
+      "hotel-bookday": "saturday",
+      "hotel-bookpeople": "2",
+      "hotel-bookstay": "2"
+    }
+  },
+  {
+    "utterance": "That is all I need to know. Thanks, good bye.",
+    "known_info": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "bedouin",
+      "restaurant-phone": "unfilled",
+      "hotel-pricerange": "expensive",
+      "hotel-type": "hotel",
+      "hotel-name": "university arms hotel",
+      "hotel-bookday": "saturday",
+      "hotel-bookpeople": "2",
+      "hotel-bookstay": "2"
+    },
+    "generated": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "bedouin",
+      "restaurant-phone": "unfilled",
+      "hotel-pricerange": "expensive",
+      "hotel-type": "hotel",
+      "hotel-name": "university arms hotel",
+      "hotel-bookday": "saturday",
+      "hotel-bookpeople": "2",
+      "hotel-bookstay": "2"
+    },
+    "expected": {
+      "restaurant-area": "centre",
+      "restaurant-pricerange": "expensive",
+      "restaurant-food": "unfilled",
+      "restaurant-name": "bedouin",
+      "restaurant-phone": "unfilled",
+      "hotel-pricerange": "expensive",
+      "hotel-type": "hotel",
+      "hotel-name": "university arms hotel",
+      "hotel-bookday": "saturday",
+      "hotel-bookpeople": "2",
+      "hotel-bookstay": "2"
+    },
+    "excess": {},
+    "missing": {}
+  }
+]

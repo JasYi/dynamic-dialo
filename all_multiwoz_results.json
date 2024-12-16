@@ -1,0 +1,1071 @@
+[
+  {
+    "PMUL4398.json": {
+      "results": [
+        {
+          "utterance": "i need a place to dine in the center thats expensive",
+          "known_info": {},
+          "generated": { "location": "center", "price_range": "expensive" },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive"
+          },
+          "excess": { "location": "center", "price_range": "expensive" },
+          "missing": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive"
+          }
+        },
+        {
+          "utterance": "Any sort of food would be fine, as long as it is a bit expensive. Could I get the phone number for your recommendation?",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-phone": "User requested the phone number for a restaurant recommendation."
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled"
+          },
+          "excess": {
+            "restaurant-phone": "User requested the phone number for a restaurant recommendation."
+          },
+          "missing": { "restaurant-food": "unfilled" }
+        },
+        {
+          "utterance": "Sounds good, could I get that phone number? Also, could you recommend me an expensive hotel?",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "Bedouin"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "Bedouin",
+            "hotel-pricerange": "expensive"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "bedouin",
+            "restaurant-phone": "unfilled",
+            "hotel-pricerange": "expensive",
+            "hotel-type": "hotel"
+          },
+          "excess": {},
+          "missing": { "restaurant-phone": "unfilled", "hotel-type": "hotel" }
+        },
+        {
+          "utterance": "Yes. Can you book it for me?",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "bedouin",
+            "restaurant-phone": "unfilled",
+            "hotel-pricerange": "expensive",
+            "hotel-type": "hotel",
+            "hotel-name": "University Arms Hotel"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "bedouin",
+            "restaurant-phone": "unfilled",
+            "hotel-pricerange": "expensive",
+            "hotel-type": "hotel",
+            "hotel-name": "University Arms Hotel",
+            "booking-date": "unfilled",
+            "booking-time": "unfilled",
+            "number-of-people": "unfilled"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "bedouin",
+            "restaurant-phone": "unfilled",
+            "hotel-pricerange": "expensive",
+            "hotel-type": "hotel",
+            "hotel-name": "university arms hotel"
+          },
+          "excess": {
+            "booking-date": "unfilled",
+            "booking-time": "unfilled",
+            "number-of-people": "unfilled"
+          },
+          "missing": {}
+        },
+        {
+          "utterance": "i want to book it for 2 people and 2 nights starting from saturday.",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "bedouin",
+            "restaurant-phone": "unfilled",
+            "hotel-pricerange": "expensive",
+            "hotel-type": "hotel",
+            "hotel-name": "university arms hotel"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "bedouin",
+            "restaurant-phone": "unfilled",
+            "hotel-pricerange": "expensive",
+            "hotel-type": "hotel",
+            "hotel-name": "university arms hotel",
+            "number-of-people": "2",
+            "number-of-nights": "unfilled",
+            "start-date": "unfilled"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "bedouin",
+            "restaurant-phone": "unfilled",
+            "hotel-pricerange": "expensive",
+            "hotel-type": "hotel",
+            "hotel-name": "university arms hotel",
+            "hotel-bookday": "saturday",
+            "hotel-bookpeople": "2",
+            "hotel-bookstay": "2"
+          },
+          "excess": {
+            "number-of-people": "2",
+            "number-of-nights": "unfilled",
+            "start-date": "unfilled"
+          },
+          "missing": {
+            "hotel-bookday": "saturday",
+            "hotel-bookpeople": "2",
+            "hotel-bookstay": "2"
+          }
+        },
+        {
+          "utterance": "That is all I need to know. Thanks, good bye.",
+          "known_info": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "bedouin",
+            "restaurant-phone": "unfilled",
+            "hotel-pricerange": "expensive",
+            "hotel-type": "hotel",
+            "hotel-name": "university arms hotel",
+            "hotel-bookday": "saturday",
+            "hotel-bookpeople": "2",
+            "hotel-bookstay": "2"
+          },
+          "generated": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "bedouin",
+            "restaurant-phone": "unfilled",
+            "hotel-pricerange": "expensive",
+            "hotel-type": "hotel",
+            "hotel-name": "university arms hotel",
+            "hotel-bookday": "saturday",
+            "hotel-bookpeople": "2",
+            "hotel-bookstay": "2"
+          },
+          "expected": {
+            "restaurant-area": "centre",
+            "restaurant-pricerange": "expensive",
+            "restaurant-food": "unfilled",
+            "restaurant-name": "bedouin",
+            "restaurant-phone": "unfilled",
+            "hotel-pricerange": "expensive",
+            "hotel-type": "hotel",
+            "hotel-name": "university arms hotel",
+            "hotel-bookday": "saturday",
+            "hotel-bookpeople": "2",
+            "hotel-bookstay": "2"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "SNG1013.json": {
+      "results": [
+        {
+          "utterance": "Guten Tag, I am staying overnight in Cambridge and need a place to sleep. I need free parking and internet.",
+          "known_info": {},
+          "generated": {
+            "location": "Cambridge",
+            "amenities": "free parking, internet"
+          },
+          "expected": {
+            "hotel-area": "centre",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes"
+          },
+          "excess": {
+            "location": "Cambridge",
+            "amenities": "free parking, internet"
+          },
+          "missing": {
+            "hotel-area": "centre",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes"
+          }
+        },
+        {
+          "utterance": "No, but I'd really like to be on the south end of the city. Do any of those fit the bill?",
+          "known_info": {
+            "hotel-area": "centre",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes"
+          },
+          "generated": {
+            "hotel-area": "centre",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes"
+          },
+          "expected": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "No I don't care about the price. Which one do you recommend?",
+          "known_info": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes"
+          },
+          "generated": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes"
+          },
+          "expected": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Yes, book it for 4 people and 4 nights starting from tuesday.",
+          "known_info": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes",
+            "hotel-name": "aylesbray lodge guest house"
+          },
+          "generated": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes",
+            "hotel-name": "aylesbray lodge guest house",
+            "number_of_people": "4",
+            "number_of_nights": "4",
+            "start_date": "tuesday"
+          },
+          "expected": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes",
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "4",
+            "hotel-bookstay": "4"
+          },
+          "excess": {
+            "number_of_people": "4",
+            "number_of_nights": "4",
+            "start_date": "tuesday"
+          },
+          "missing": {
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "4",
+            "hotel-bookstay": "4"
+          }
+        },
+        {
+          "utterance": "How about for 3 nights?",
+          "known_info": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes",
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "4",
+            "hotel-bookstay": "4"
+          },
+          "generated": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes",
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "4",
+            "hotel-bookstay": "4"
+          },
+          "expected": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes",
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "4",
+            "hotel-bookstay": "3"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Great. I am all set then. Have a nice day. Bye.",
+          "known_info": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes",
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "4",
+            "hotel-bookstay": "3"
+          },
+          "generated": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes",
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "4",
+            "hotel-bookstay": "3"
+          },
+          "expected": {
+            "hotel-area": "south",
+            "hotel-internet": "yes",
+            "hotel-parking": "yes",
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "4",
+            "hotel-bookstay": "3"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "PMUL0121.json": {
+      "results": [
+        {
+          "utterance": "Hi there! Can you give me some info on Cityroomz?",
+          "known_info": {},
+          "generated": { "Cityroomz": "unfilled" },
+          "expected": { "hotel-name": "cityroomz" },
+          "excess": { "Cityroomz": "unfilled" },
+          "missing": { "hotel-name": "cityroomz" }
+        },
+        {
+          "utterance": "Yes please. I need it for 7 people for 3 nights starting on tuesday.",
+          "known_info": { "hotel-name": "cityroomz" },
+          "generated": {
+            "hotel-name": "cityroomz",
+            "number-of-people": "7",
+            "number-of-nights": "3",
+            "start-date": "Tuesday"
+          },
+          "expected": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3"
+          },
+          "excess": {
+            "number-of-people": "7",
+            "number-of-nights": "3",
+            "start-date": "Tuesday"
+          },
+          "missing": {
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3"
+          }
+        },
+        {
+          "utterance": "I would like to book it for 3 nights beginning on Tuesday.",
+          "known_info": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3"
+          },
+          "generated": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "duration": "3 nights",
+            "start_day": "Tuesday"
+          },
+          "expected": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3"
+          },
+          "excess": { "duration": "3 nights", "start_day": "Tuesday" },
+          "missing": {}
+        },
+        {
+          "utterance": "Yeah, I need a restaurant in the west and with expensive pricing.",
+          "known_info": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3"
+          },
+          "generated": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-location": "west",
+            "restaurant-pricing": "expensive"
+          },
+          "expected": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive"
+          },
+          "excess": {
+            "restaurant-location": "west",
+            "restaurant-pricing": "expensive"
+          },
+          "missing": {
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive"
+          }
+        },
+        {
+          "utterance": "No, I don't have a preference, but I need the phone number and postcode.",
+          "known_info": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive"
+          },
+          "generated": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive",
+            "hotel-phone-number": "unfilled",
+            "hotel-postcode": "unfilled"
+          },
+          "expected": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled"
+          },
+          "excess": {
+            "hotel-phone-number": "unfilled",
+            "hotel-postcode": "unfilled"
+          },
+          "missing": {
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled"
+          }
+        },
+        {
+          "utterance": "No, right now, I just need the infor. Thanks!",
+          "known_info": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled"
+          },
+          "generated": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled"
+          },
+          "expected": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "That is all. thanks",
+          "known_info": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled"
+          },
+          "generated": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled"
+          },
+          "expected": {
+            "hotel-name": "cityroomz",
+            "hotel-bookday": "tuesday",
+            "hotel-bookpeople": "7",
+            "hotel-bookstay": "3",
+            "restaurant-area": "west",
+            "restaurant-pricerange": "expensive",
+            "restaurant-phone": "unfilled",
+            "restaurant-postcode": "unfilled"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "PMUL3484.json": {
+      "results": [
+        {
+          "utterance": "I am looking for a hotel named alyesbray lodge guest house.",
+          "known_info": {},
+          "generated": { "hotel_name": "alyesbray lodge guest house" },
+          "expected": { "hotel-name": "alyesbray lodge guest house" },
+          "excess": { "hotel_name": "alyesbray lodge guest house" },
+          "missing": { "hotel-name": "alyesbray lodge guest house" }
+        },
+        {
+          "utterance": "I would like to book a reservation for it. Can you help me with that?",
+          "known_info": { "hotel-name": "alyesbray lodge guest house" },
+          "generated": {
+            "hotel-name": "alyesbray lodge guest house",
+            "reservation-date": "unfilled",
+            "number-of-guests": "unfilled",
+            "room-type": "unfilled"
+          },
+          "expected": { "hotel-name": "aylesbray lodge guest house" },
+          "excess": {
+            "reservation-date": "unfilled",
+            "number-of-guests": "unfilled",
+            "room-type": "unfilled"
+          },
+          "missing": {}
+        },
+        {
+          "utterance": "We will be arriving on Sunday and will stay for 5 nights.",
+          "known_info": { "hotel-name": "aylesbray lodge guest house" },
+          "generated": {
+            "hotel-name": "aylesbray lodge guest house",
+            "arrival-date": "Sunday",
+            "number-of-nights": "5"
+          },
+          "expected": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5"
+          },
+          "excess": { "arrival-date": "Sunday", "number-of-nights": "5" },
+          "missing": { "hotel-bookday": "sunday", "hotel-bookstay": "5" }
+        },
+        {
+          "utterance": "There will be 8 guests.",
+          "known_info": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5"
+          },
+          "generated": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-numberofguests": "8"
+          },
+          "expected": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8"
+          },
+          "excess": { "hotel-numberofguests": "8" },
+          "missing": { "hotel-bookpeople": "8" }
+        },
+        {
+          "utterance": "that is it thank you.",
+          "known_info": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8"
+          },
+          "generated": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8"
+          },
+          "expected": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Can you actually look up a restaurant for me as well?",
+          "known_info": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8"
+          },
+          "generated": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "unfilled",
+            "restaurant-location": "unfilled",
+            "restaurant-cuisine": "unfilled",
+            "restaurant-bookday": "unfilled",
+            "restaurant-booktime": "unfilled",
+            "restaurant-bookpeople": "unfilled"
+          },
+          "expected": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8"
+          },
+          "excess": {
+            "restaurant-name": "unfilled",
+            "restaurant-location": "unfilled",
+            "restaurant-cuisine": "unfilled",
+            "restaurant-bookday": "unfilled",
+            "restaurant-booktime": "unfilled",
+            "restaurant-bookpeople": "unfilled"
+          },
+          "missing": {}
+        },
+        {
+          "utterance": "It's a place called Don Pasquale Pizzeria.",
+          "known_info": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8"
+          },
+          "generated": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8"
+          },
+          "expected": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "don pasquale pizzeria"
+          },
+          "excess": {},
+          "missing": { "restaurant-name": "don pasquale pizzeria" }
+        },
+        {
+          "utterance": "Yes, I do. I'll need it booked for the same day, same people, and we'd like to eat at 19:00.",
+          "known_info": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "don pasquale pizzeria"
+          },
+          "generated": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "don pasquale pizzeria",
+            "restaurant-bookday": "unfilled",
+            "restaurant-booktime": "19:00",
+            "restaurant-bookpeople": "unfilled"
+          },
+          "expected": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "don pasquale pizzeria",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "19:00"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Great. One more thing. Can you book a taxi between the two places? I'd like to arrive at the restaurant in time for my reservation.",
+          "known_info": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "don pasquale pizzeria",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "19:00"
+          },
+          "generated": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "don pasquale pizzeria",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "19:00",
+            "taxi-pickup-location": "unfilled",
+            "taxi-dropoff-location": "unfilled",
+            "taxi-arrival-time": "unfilled"
+          },
+          "expected": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "don pasquale pizzeria",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "19:00",
+            "taxi-arriveby": "19:00",
+            "taxi-departure": "alyesbray lodge guest house",
+            "taxi-destination": "don pasquale pizzeria"
+          },
+          "excess": {
+            "taxi-pickup-location": "unfilled",
+            "taxi-dropoff-location": "unfilled",
+            "taxi-arrival-time": "unfilled"
+          },
+          "missing": {
+            "taxi-arriveby": "19:00",
+            "taxi-departure": "alyesbray lodge guest house",
+            "taxi-destination": "don pasquale pizzeria"
+          }
+        },
+        {
+          "utterance": "Thank you so much that was all I needed.",
+          "known_info": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "don pasquale pizzeria",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "19:00",
+            "taxi-arriveby": "19:00",
+            "taxi-departure": "alyesbray lodge guest house",
+            "taxi-destination": "don pasquale pizzeria"
+          },
+          "generated": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "don pasquale pizzeria",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "19:00",
+            "taxi-arriveby": "19:00",
+            "taxi-departure": "alyesbray lodge guest house",
+            "taxi-destination": "don pasquale pizzeria"
+          },
+          "expected": {
+            "hotel-name": "aylesbray lodge guest house",
+            "hotel-bookday": "sunday",
+            "hotel-bookstay": "5",
+            "hotel-bookpeople": "8",
+            "restaurant-name": "don pasquale pizzeria",
+            "restaurant-bookday": "sunday",
+            "restaurant-bookpeople": "8",
+            "restaurant-booktime": "19:00",
+            "taxi-arriveby": "19:00",
+            "taxi-departure": "aylesbray lodge guest house",
+            "taxi-destination": "don pasquale pizzeria"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  },
+  {
+    "SNG0389.json": {
+      "results": [
+        {
+          "utterance": "i need a train on tuesday out of kings lynn",
+          "known_info": {},
+          "generated": {
+            "departure_date": "Tuesday",
+            "departure_location": "unfilled"
+          },
+          "expected": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn"
+          },
+          "excess": {
+            "departure_date": "Tuesday",
+            "departure_location": "unfilled"
+          },
+          "missing": { "train-day": "tuesday", "train-departure": "kings lynn" }
+        },
+        {
+          "utterance": "I want to leave on Tuesday.",
+          "known_info": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn"
+          },
+          "generated": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "departure_day": "Tuesday"
+          },
+          "expected": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn"
+          },
+          "excess": { "departure_day": "Tuesday" },
+          "missing": {}
+        },
+        {
+          "utterance": "I'd like to leave after 9:30.",
+          "known_info": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn"
+          },
+          "generated": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "departure-time": "after 9:30"
+          },
+          "expected": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "9:30"
+          },
+          "excess": { "departure-time": "after 9:30" },
+          "missing": { "train-leaveat": "9:30" }
+        },
+        {
+          "utterance": "Looking for a train Tuesday leaving kings lynn after 9:30 to go to cambridge.",
+          "known_info": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "9:30"
+          },
+          "generated": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "9:30",
+            "train-destination": "cambridge",
+            "train-departure-time": "after 9:30"
+          },
+          "expected": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge"
+          },
+          "excess": { "train-departure-time": "after 9:30" },
+          "missing": {}
+        },
+        {
+          "utterance": "No, I'd like a train leaving after 09:30 departing from Kings Lynn and going to Cambridge. Please take another look?",
+          "known_info": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge"
+          },
+          "generated": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge",
+            "departure_time": "after 09:30",
+            "departure_station": "Kings Lynn",
+            "arrival_station": "Cambridge"
+          },
+          "expected": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge"
+          },
+          "excess": {
+            "departure_time": "after 09:30",
+            "departure_station": "Kings Lynn",
+            "arrival_station": "Cambridge"
+          },
+          "missing": {}
+        },
+        {
+          "utterance": "Wow...no, I really needed that time. I guess not. Thanks anyway.",
+          "known_info": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge"
+          },
+          "generated": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge"
+          },
+          "expected": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Yes, that works. Please book for two people. Thanks for checking again.",
+          "known_info": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge"
+          },
+          "generated": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge",
+            "number-of-passengers": "two"
+          },
+          "expected": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge",
+            "train-bookpeople": "2"
+          },
+          "excess": { "number-of-passengers": "two" },
+          "missing": { "train-bookpeople": "2" }
+        },
+        {
+          "utterance": "Perfect. Thank you for your help. Have a great day. Bye.",
+          "known_info": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge",
+            "train-bookpeople": "2"
+          },
+          "generated": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge",
+            "train-bookpeople": "2"
+          },
+          "expected": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge",
+            "train-bookpeople": "2"
+          },
+          "excess": {},
+          "missing": {}
+        },
+        {
+          "utterance": "Have a nice day.",
+          "known_info": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge",
+            "train-bookpeople": "2"
+          },
+          "generated": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge",
+            "train-bookpeople": "2"
+          },
+          "expected": {
+            "train-day": "tuesday",
+            "train-departure": "kings lynn",
+            "train-leaveat": "09:30",
+            "train-destination": "cambridge",
+            "train-bookpeople": "2"
+          },
+          "excess": {},
+          "missing": {}
+        }
+      ]
+    }
+  }
+]

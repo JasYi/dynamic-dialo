@@ -72,13 +72,14 @@ fill_slot_prompt = '''
     You are given a conversation context and a slot model.
     The slot model is a list of slot names that need to be filled. 
     A slot name corresponds to a piece of information that the user can provide.
-    If the user answers with information answers a topic in the slot model then call fill_slot_func with the slot name and value.
+    If the user answers with information that answers a topic in the slot model then call fill_slot_func with the slot names and values.
+    If necessary you can fill multiple slots representing the different pieces of information the user provided.
     Use the entire conversation context as context but only take an action based on the last user message.
     Do not fill a slot if the user is not answering a question or providing information that is in the slot model.
     If it is not necessary to fill a slot then do nothing and do not call fill_slot_func.
 '''
 
-def check_create_slot(convo_context, slot_model, remaining_slots):
+def check_create_slot(convo_context, user_response, slot_model, remaining_slots):
     tools_in = [
         {
             "type": "function",
@@ -89,8 +90,12 @@ def check_create_slot(convo_context, slot_model, remaining_slots):
     user_prompt = f'''
         Here is the conversation context:
         {convo_context}
+        
         Here are the slots that already exist:
         {", ".join(remaining_slots)}
+        
+        Here is the last user message:
+        User: {user_response}
     '''
     
     msgs_in = [
@@ -114,7 +119,7 @@ def check_create_slot(convo_context, slot_model, remaining_slots):
         return True
     return False
 
-def check_fill_slot(convo_context, slot_model, remaining_slots):
+def check_fill_slot(convo_context, user_response, slot_model, remaining_slots):
     tools_in = [
         {
             "type": "function",
@@ -125,8 +130,12 @@ def check_fill_slot(convo_context, slot_model, remaining_slots):
     user_prompt = f'''
         Here is the conversation context:
         {convo_context}
+        
         Here are the slots that need to be filled:
         {", ".join(remaining_slots)}
+        
+        Here is the last user message:
+        User: {user_response}
     '''
     
     msgs_in = [
@@ -139,7 +148,7 @@ def check_fill_slot(convo_context, slot_model, remaining_slots):
         model="gpt-4o",
         messages=msgs_in,
         tools=tools_in,
-        temperature=0.3
+        temperature=0.7
     )
     
     tool_choice = completion.choices[0].message.tool_calls[0] if completion.choices[0].message.tool_calls else None
@@ -252,6 +261,7 @@ def run_dialogue(start_state):
     slot_model = start_state
     remaining_slots = [key for key, value in slot_model.items() if value == "unfilled"]
     conversation = ""
+    user_response = ""
     while remaining_slots:
         slot_name = find_next_slot(conversation, remaining_slots)
         response = generate_response("find_slot", slot_name)
@@ -259,9 +269,9 @@ def run_dialogue(start_state):
         print(response)
         user_response = input()
         conversation += f"User: {user_response}\n"
-        created_slot = check_create_slot(conversation, slot_model, slot_model.keys())
+        created_slot = check_create_slot(conversation, user_response, slot_model, slot_model.keys())
         remaining_slots = [key for key, value in slot_model.items() if value == "unfilled"]
-        filled_slot = check_fill_slot(conversation, slot_model, remaining_slots)
+        filled_slot = check_fill_slot(conversation, user_response, slot_model, remaining_slots)
         # response = generate_response("confirm", slot_name, user_response)
         # print(response)
         remaining_slots = [key for key, value in slot_model.items() if value == "unfilled"]
@@ -317,21 +327,22 @@ def run_dialogue_no_input():
     
 
 if __name__ == "__main__":
-    airport_slots = {
-        "destination_city": "unfilled", 
-        "departure_city": "unfilled",
-        "departure_date": "unfilled", 
-        "return_date": "unfilled", 
-        "budget": "unfilled", 
-        "preferred_airline": "unfilled", 
-    }
-    
-    pizza_slots = {
-        "pizza_size": "unfilled",
-        "pizza_toppings": "unfilled",
-        "delivery_address": "unfilled",
-    }
-    
-    run_dialogue(pizza_slots)
-    
-    run_dialogue_no_input()
+        airport_slots = {
+            "destination_city": "unfilled", 
+            "departure_city": "unfilled",
+            "departure_date": "unfilled", 
+            "return_date": "unfilled", 
+            "budget": "unfilled", 
+            "preferred_airline": "unfilled", 
+        }
+        
+        pizza_slots = {
+            "pizza_size": "unfilled",
+            "pizza_toppings": "unfilled",
+            "delivery_address": "unfilled",
+        }
+        
+        run_dialogue(pizza_slots)
+        
+        run_dialogue_no_input()
+        
